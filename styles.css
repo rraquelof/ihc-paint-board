@@ -1,0 +1,34 @@
+:root {
+  color-scheme: dark;
+  --ink: #e9ede5;
+  --muted: #aab0a4;
+  --paper: #171918;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; min-height: 100%; margin: 0; }
+body {
+  overflow: hidden;
+  background: #121413;
+  color: var(--ink);
+  font-family: Outfit, system-ui, sans-serif;
+}
+.experience { height: 100vh; padding: 24px 32px; }
+.canvas-wrap { position: relative; height: 100%; overflow: hidden; background: var(--paper); }
+canvas { display: block; position: relative; z-index: 1; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
+.canvas-action { position: absolute; z-index: 4; border: 0; color: var(--ink); font: 300 26px/1 Outfit, sans-serif; cursor: pointer; transition: transform .18s ease, background .18s ease, box-shadow .18s ease; }
+.canvas-action:hover { transform: scale(1.1); }
+.canvas-action:focus-visible { outline: 1px solid #e9ede5; outline-offset: 4px; }
+.grain { top: 18px; right: 18px; width: 34px; height: 34px; border-radius: 50%; background: #272b27; box-shadow: inset 0 0 0 1px #ffffff22; }
+.grain:hover { background: #3b423b; }
+.text-action { top: 18px; right: 60px; width: 34px; height: 34px; border-radius: 50%; background: #272b27; box-shadow: inset 0 0 0 1px #ffffff22; font-size: 19px; font-weight: 600; }
+.text-action:hover, .text-action[aria-expanded="true"] { background: #3b423b; }
+.text-entry { position: absolute; z-index: 4; top: 60px; right: 18px; width: min(280px, calc(100% - 36px)); padding: 8px; border: 1px solid #ffffff20; border-radius: 10px; background: #20231f; box-shadow: 0 12px 28px #0006; }
+.text-entry input { display: block; width: 100%; border: 1px solid #ffffff24; border-radius: 6px; background: #121413; color: var(--ink); padding: 9px; font: 400 14px/1 Outfit, sans-serif; outline: none; }
+.text-entry input:focus { border-color: #ffffff9e; }
+.ambient { bottom: 19px; width: 42px; height: 42px; border-radius: 50%; }
+.ambient-one { left: 20px; background: #f05252; color: #2a0808; box-shadow: 0 0 23px #f0525261; }
+.ambient-one:hover { background: #ff8383; }
+.ambient-two { right: 20px; background: #a684ff; color: #180f30; box-shadow: 0 0 23px #a684ff59; }
+.ambient-two:hover, .ambient-two[aria-pressed="true"] { background: #d8cbff; box-shadow: 0 0 30px #d8cbffaa; }
+@media (max-width: 600px) { .experience { padding: 18px; } }

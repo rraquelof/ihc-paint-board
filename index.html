@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campo de Tinta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="experience" aria-label="Campo de tinta interativo">
+      <section class="canvas-wrap">
+        <button class="text-action canvas-action" id="text-tool" type="button" aria-label="Adicionar texto" aria-expanded="false" title="Adicionar texto">T</button>
+        <form class="text-entry" id="text-entry" hidden>
+          <input id="text-input" type="text" maxlength="100" autocomplete="off" aria-label="Escrever texto" />
+        </form>
+        <canvas id="paint" aria-label="Área de desenho. Use o cursor para explorar."></canvas>
+        <button class="grain canvas-action" id="undo" type="button" aria-label="Desfazer último traço" title="Desfazer">↓</button>
+        <button class="ambient ambient-one canvas-action" id="clear" type="button" aria-label="Apagar todo o desenho" title="Limpar tudo">!</button>
+        <button class="ambient ambient-two canvas-action" id="eraser" type="button" aria-label="Ativar apagador" aria-pressed="false" title="Apagador">⌁</button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
